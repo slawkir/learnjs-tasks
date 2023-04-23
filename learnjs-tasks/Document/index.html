@@ -7,21 +7,18 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="alert" id="div">
-    <strong>Всем привет!</strong> Вы прочитали важное сообщение.
-  </div>
+ <input type="button" id="hider" value="Нажмите, чтобы спрятать текст" />
 
-  <style>
-  .alert {
-    padding: 15px;
-    border: 1px solid #d6e9c6;
-    border-radius: 4px;
-    color: #3c763d;
-    background-color: #dff0d8;
-    width: 500px;
-  }
-</style>
+ <div id="text">Текст</div>
 
-  <script src="./script.js"></script>
+ <script>
+   let div = document.getElementById('text');
+   let input = document.getElementById('hider');
+   input.addEventListener('click', () => div.hidden = true);
+
+  // document.getElementById('hider').onclick = function() {
+  //     this.hidden = true;
+  //   }
+ </script>
 </body>
 </html>
